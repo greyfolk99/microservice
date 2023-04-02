@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/greyfolk99/spring-cloud-config.git
+          default-label: main
+          username: ${secret.github.username}
+          password : ${secret.github.token}
+
